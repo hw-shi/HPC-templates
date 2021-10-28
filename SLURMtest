@@ -1,0 +1,17 @@
+#!/bin/bash
+#SBATCH --job-name=test
+
+#SBATCH --nodes=1  
+#SBATCH --ntasks=1
+#SBATCH --mem=6gb                    
+#SBATCH --time=00:02:00   
+#SBATCH --partition=standard
+#SBATCH --account=zhuangquntao
+
+
+echo $SLURM_ARRAY_TASK_ID
+echo $m
+module load mathematica
+math -script "test/SLURMtest.wl" $m $SLURM_ARRAY_TASK_ID
+
+# commandline: for mm in {1..3}; do sbatch -a 1-5 --export m=$mm scripts/test/SLURMtest ;done

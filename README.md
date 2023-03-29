@@ -1,6 +1,6 @@
 # HPC-templates
 
-This is a dropbox sharing HPC scripts for [Quntao Zhuang's quantum information theory group](https://sites.google.com/view/quntaozhuang).
+This is a dropbox sharing HPC scripts for [Quantum information theory group](https://sites.google.com/view/quntaozhuang).
 
 ## SLURM test
 Run a job array with customized argument input on the HPC based on SLURM.
